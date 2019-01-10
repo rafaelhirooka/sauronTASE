@@ -13,7 +13,7 @@ Vegas Card Sauron T.A.S.E is a software that monitors Vegas Card environment and
 * sockets - active on php extensions
 
 ### Clone
-* Clone this repo to your local machine using https://github.com/*******
+* Clone this repo to your local machine using https://github.com/rafaelhirooka/sauronTASE.git
 
 ### Install dependencies
 ```
