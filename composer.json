@@ -1,6 +1,6 @@
 {
-    "name": "rafael.hirooka/monitoring-system",
-    "description": "Monitoring system",
+    "name": "rafael.hirooka/sauron-tase",
+    "description": "Vegas Card Sauron T.A.S.E is a software that monitors Vegas Card environment and it sends SMS when it finds an error.",
     "license": "VEGAS",
     "authors": [
         {

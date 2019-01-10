@@ -30,12 +30,12 @@ abstract class AbstractProgram extends \Thread implements Program {
         $this->logger = new Logger(new MongoController(MONGO_HOST, MONGO_PORT));
     }
 
-    public function setName(string $name) {
-        $this->name = $name;
-    }
-
     public function setTime(int $time) {
         $this->time = $time;
+    }
+
+    public function setName(string $name) {
+        $this->name = $name;
     }
 
     public function getLogger() {
@@ -61,13 +61,13 @@ abstract class AbstractProgram extends \Thread implements Program {
                 'region' => 'us-east-1',
                 'version' => '2010-03-31',
                 'credentials' => [
-                    'key' => 'AKIAIGMEFVZH4BHD4YPA',
-                    'secret' => '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'
+                    'key' => AWS_KEY,
+                    'secret' => AWS_SECRET
                 ]
             ]);
             $client->publish([
                 'Message' => $message,
-                //'TopicArn' => 'arn:aws:sns:us-east-1:398709985239:monitoring-system'
+                //'TopicArn' => AWS_TOPIC_ARN
                 'PhoneNumber' => '+5519996941420'
             ]);
         } catch (\Exception $e) {
@@ -84,6 +84,8 @@ abstract class AbstractProgram extends \Thread implements Program {
 
     final private function verify() {
         $this->loader->register();
+
+        $this->logger->log('infos', 'Up: ' . $this->name);
 
         /*print "Envio teste FuturoFone para {$this->name}\n";
         $this->send(['message' => 'Testando o envio FuturoFone - ' . $this->name, 'phone' => '5519996941420']);

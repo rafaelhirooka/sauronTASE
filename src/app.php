@@ -6,19 +6,19 @@
  * Time: 15:26
  */
 
-require_once "config/bootstrap.php";
+require_once __DIR__ . "/config/bootstrap.php";
 
 
 try {
+    $programs = json_decode(file_get_contents(__DIR__ . "/config/programs.json"));
 
-    if (file_exists($dir)) {
-        $files = array_diff(scandir($dir), array('..', '.'));
+    if ($programs != NULL && !empty($programs)) {
 
-        $files = array_values($files);
+        $programs = (array)$programs;
+        $files = $programs['programsToRun'];
 
         $all_threads = [];
         foreach ($files as $file) {
-            echo $file . "\n";
             $file = str_replace('.php', '', $file);
             $class_name = '\App\Programs\\' . $file;
 
@@ -41,12 +41,12 @@ try {
         }
 
     } else {
-        echo 'Nao tem';
+        exit('-> No programs');
     }
 
 
-
+    exit(0);
 
 } catch (\Exception $e) {
-    echo $e->getMessage();
+    exit('-> ' . $e->getMessage());
 }

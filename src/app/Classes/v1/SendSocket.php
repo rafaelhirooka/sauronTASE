@@ -30,7 +30,7 @@ class SendSocket extends \Thread {
             $this->loader->register();
 
             $socket = socket_create(AF_INET, SOCK_STREAM, 0);
-            $con = @socket_connect($socket, '192.168.1.53', 25003);
+            $con = @socket_connect($socket, SMS_ADDRESS, SMS_PORT);
 
             if ($socket !== false && $con !== false) {
                 socket_set_option($socket,SOL_SOCKET, SO_RCVTIMEO, array("sec" => 30, "usec" => 0));

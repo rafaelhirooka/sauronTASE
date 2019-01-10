@@ -35,7 +35,7 @@ class Logger {
     public function __construct(MongoController $db, string $dateFormat = 'Y-m-d H:i:s') {
         $this->db = $db;
 
-        $this->db->setDB('monitoring_system');
+        $this->db->setDB('sauron-tase');
 
         $this->dateFormat = $dateFormat;
     }
