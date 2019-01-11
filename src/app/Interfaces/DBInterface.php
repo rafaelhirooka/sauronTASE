@@ -6,6 +6,7 @@
  * Time: 14:01
  */
 
+namespace App\Interfaces;
 
 interface DBInterface {
     /*

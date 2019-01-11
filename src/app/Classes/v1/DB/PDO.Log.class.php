@@ -6,7 +6,8 @@
  * Time: 14:00
  */
 
-namespace Api\v1\DB;
+namespace App\Classes\v1\DB;
+
 
 class Log {
     private $path = '/logs/';

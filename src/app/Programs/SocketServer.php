@@ -17,6 +17,7 @@ class SocketServer extends AbstractProgram {
 
     protected function main() {
         try {
+            $this->setName('socketServer');
 
             $this->socket = socket_create(AF_INET, SOCK_STREAM, 0);
 

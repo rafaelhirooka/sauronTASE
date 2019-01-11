@@ -13,6 +13,7 @@
         "ext-sockets": "*",
         "ext-pthreads": "*",
         "ext-json": "*",
+        "ext-pdo": "*",
         "aws/aws-sdk-php": "^3.81",
         "clue/socket-raw": "1.3"
     },

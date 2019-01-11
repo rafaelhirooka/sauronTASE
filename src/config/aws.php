@@ -12,7 +12,7 @@
 | AWS key
 |--------------------------------------------------------------------------
 */
-define('AWS_KEY', 'AKIAIGMEFVZH4BHD4YPA');
+define('AWS_KEY', getenv('AWS_ACCESS_KEY'));
 
 
 /*
@@ -20,7 +20,7 @@ define('AWS_KEY', 'AKIAIGMEFVZH4BHD4YPA');
 | AWS secret
 |--------------------------------------------------------------------------
 */
-define('AWS_SECRET', 'kLaHVuT7qtE3jY7W/8z87+27SnvXOE/V3893P1Kn');
+define('AWS_SECRET', getenv('AWS_SECRET_ACCESS_KEY'));
 
 /*
 |--------------------------------------------------------------------------

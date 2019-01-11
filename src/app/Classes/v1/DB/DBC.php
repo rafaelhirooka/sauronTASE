@@ -8,9 +8,13 @@
 
 namespace App\Classes\v1\DB;
 
-include_once("PDO.Log.class.php");
+use App\Interfaces\DBInterface;
 
-abstract class DBC implements \DBInterface {
+
+include_once "PDO.Log.class.php";
+
+
+abstract class DBC implements DBInterface {
     private $Host;
     private $DBName;
     private $DBUser;

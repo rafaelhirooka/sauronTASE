@@ -8,8 +8,6 @@
 
 namespace App\Classes\v1\DB;
 
-require_once("DBC.php");
-
 class DBController extends DBC {
 
 
