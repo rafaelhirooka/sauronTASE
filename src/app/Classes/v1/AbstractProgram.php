@@ -59,11 +59,7 @@ abstract class AbstractProgram extends \Thread implements Program {
 
             $client = new SnsClient([
                 'region' => 'us-east-1',
-                'version' => '2010-03-31',
-                'credentials' => [
-                    'key' => AWS_KEY,
-                    'secret' => AWS_SECRET
-                ]
+                'version' => '2010-03-31'
             ]);
             $client->publish([
                 'Message' => $message,
