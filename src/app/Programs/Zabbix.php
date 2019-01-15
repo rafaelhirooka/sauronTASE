@@ -145,11 +145,11 @@ class Zabbix extends AbstractProgram {
 
                 if ($subject == 'aalerta teste sms') {
                     $res["type"] = 'test';
-                    $res["subject"] = "Boa tarde " .$user_name . ". Este é um SMS de teste.";
+                    $res["subject"] = "Boa tarde. Este é um SMS de teste.";
 
 
                 } else {
-                    $res["subject"] = "Olá " . $user_name . ". Temos um problema: ". ucfirst($subject);
+                    $res["subject"] = "Olá. Temos um problema: ". ucfirst($subject);
                 }
 
 
@@ -163,7 +163,7 @@ class Zabbix extends AbstractProgram {
                 // Remove spaces
                 $subject = trim($subject);
 
-                $res["subject"] = "Olá " . $user_name . ". O problema ". ucfirst($subject) . " foi normalizado.";
+                $res["subject"] = "Olá. O problema ". ucfirst($subject) . " foi normalizado.";
             }
 
             return $res["subject"];
