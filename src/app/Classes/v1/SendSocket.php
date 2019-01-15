@@ -29,13 +29,19 @@ class SendSocket extends \Thread {
         try {
             $this->loader->register();
 
+            $json = (array)$this->json;
+
+            foreach ($json as $k => $item) {
+                $json[$k] = (array)$item;
+            }
+
             $socket = socket_create(AF_INET, SOCK_STREAM, 0);
             $con = @socket_connect($socket, SMS_ADDRESS, SMS_PORT);
 
             if ($socket !== false && $con !== false) {
                 socket_set_option($socket,SOL_SOCKET, SO_RCVTIMEO, array("sec" => 30, "usec" => 0));
 
-                $string = json_encode($this->json);
+                $string = json_encode($json);
                 $string .= "\n";
 
                 if ($string !== false) {
@@ -71,8 +77,8 @@ class SendSocket extends \Thread {
 
 
         } catch (\Exception $e) {
-            $this->program->getLogger()->log('error', $e->getMessage() . ' File: ' . $e->getFile() . '. Line: ' . $e->getLine());
-            $this->program->sendContingency($this->json->message);
+            $this->program->logger->log('error', $e->getMessage() . ' File: ' . $e->getFile() . '. Line: ' . $e->getLine());
+            $this->program->sendContingency($this->json[0]->message);
         }
     }
 }

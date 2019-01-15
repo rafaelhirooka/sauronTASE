@@ -20,7 +20,7 @@ abstract class AbstractProgram extends \Thread implements Program {
 
     protected $loader;
 
-    protected $logger;
+    public $logger;
 
     protected $time = 60;
 
@@ -58,6 +58,7 @@ abstract class AbstractProgram extends \Thread implements Program {
             $this->logger->log('info', 'Sending using AWS');
 
             $client = new SnsClient([
+                'profile' => 'profile-sauron',
                 'region' => 'us-east-1',
                 'version' => '2010-03-31'
             ]);
@@ -103,6 +104,6 @@ abstract class AbstractProgram extends \Thread implements Program {
     }
 
     public function __destruct() {
-        $this->logger = NULL;
+        //$this->logger = NULL;
     }
 }

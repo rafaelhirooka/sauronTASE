@@ -14,54 +14,66 @@ use App\Classes\v1\DB\DBController;
 
 class Zabbix extends AbstractProgram {
 
-    private $db;
-
     private $alerts;
 
-    protected $time = 300;
+    protected $time = 5;
 
     protected function main() {
         try {
             $this->setName('zabbix');
 
 
-            $this->connectDB();
+            $db = new DBController('192.168.1.8', 'root', 's3gr3d0', 'zabbix', 'mysql');
 
 
-            $alerts = $this->getAlertsToSend();
-
-            //var_dump($alerts);
-
-        } catch (\Exception $e) {
-
-        }
-
-    }
-
-    private function connectDB() {
-        try {
-            $this->db = new DBController('192.168.1.8', 'root', 's3gr3d0', 'zabbix', 'mysql');
-        } catch (\Exception $e) {
-
-        }
-    }
-
-    public function getAlertsToSend() {
-        try {
-            // Build the query
             $query = "SELECT * FROM alerts 
             INNER JOIN users ON users.userid = alerts.userid
             WHERE status = 1 AND mediatypeid = 6 AND sent = 0 
             ORDER BY clock DESC";
 
-            $r = $this->db->custom($query);
+            $r = $db->custom($query);
 
-            $this->set($r);
+            $alerts = [];
+            if (!empty($r)) {
+
+                $i = 0;
+                foreach ($r as $k => $item) {
+                    // Set formatted subjects
+                    $alerts[$i]['message'] = $this->buildSubject($item["subject"], $item["name"]);
+                    $alerts[$i]['phone'] = preg_replace('/\D/', '', $item["sendto"]);
+                    $alerts[$i]['id'] = $item["alertid"];
+
+                    $i++;
+                }
+            }
+
+            if (!empty($alerts)) {
+                $param = array('sent' => 1);
+
+                foreach ($alerts as $alert) {
+                    $condition = array(
+                        array(
+                            'c' => 'alertid',
+                            'o' => '=',
+                            'v' => $alert['id']
+                        )
+                    );
+
+                    $db->update('alerts', $param, $condition);
+                }
+            }
+
+
+            if (!empty($alerts)) {
+                $this->send($alerts);
+            }
+
 
 
         } catch (\Exception $e) {
-            throw new \Exception($e->getMessage());
+
         }
+
     }
 
     public function set(array $info) {
