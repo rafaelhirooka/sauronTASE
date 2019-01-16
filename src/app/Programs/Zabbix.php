@@ -22,9 +22,7 @@ class Zabbix extends AbstractProgram {
         try {
             $this->setName('zabbix');
 
-
             $db = new DBController('192.168.1.8', 'root', 's3gr3d0', 'zabbix', 'mysql');
-
 
             $query = "SELECT * FROM alerts 
             INNER JOIN users ON users.userid = alerts.userid
@@ -39,7 +37,7 @@ class Zabbix extends AbstractProgram {
                 $i = 0;
                 foreach ($r as $k => $item) {
                     // Set formatted subjects
-                    $alerts[$i]['message'] = $this->buildSubject($item["subject"], $item["name"]);
+                    $alerts[$i]['message'] = $this->buildSubject($item["subject"]);
                     $alerts[$i]['phone'] = preg_replace('/\D/', '', $item["sendto"]);
                     $alerts[$i]['id'] = $item["alertid"];
 
@@ -63,15 +61,12 @@ class Zabbix extends AbstractProgram {
                 }
             }
 
-
             if (!empty($alerts)) {
                 $this->send($alerts);
             }
 
-
-
         } catch (\Exception $e) {
-
+            $this->logger->log('error', $e->getMessage() . '. File: ' . $e->getFile() . '. Line: ' . $e->getLine());
         }
 
     }
