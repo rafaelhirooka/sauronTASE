@@ -84,7 +84,7 @@ class Zabbix extends AbstractProgram {
                 $i = 0;
                 foreach ($info as $k => $item) {
                     // Set formatted subjects
-                    $this->alerts[$i]['message'] = $this->buildSubject($item["subject"], $item["name"]);
+                    $this->alerts[$i]['message'] = $this->buildSubject($item["subject"]);
                     $this->alerts[$i]['phone'] = preg_replace('/\D/', '', $item["sendto"]);
                     $this->alerts[$i]['id'] = $item["alertid"];
 
@@ -122,7 +122,7 @@ class Zabbix extends AbstractProgram {
         }
     }
 
-    private function buildSubject($subject, $user_name) {
+    private function buildSubject($subject) {
         try {
             $res = array();
 
