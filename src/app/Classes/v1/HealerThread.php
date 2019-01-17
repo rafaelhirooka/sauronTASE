@@ -18,6 +18,8 @@ class HealerThread extends \Thread {
     }
 
     public function run() {
+        $this->healer->setTime(30);
+        $this->healer->setName('Healer');
         $this->healer->run();
     }
 }

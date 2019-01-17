@@ -1,0 +1,23 @@
+Time : 13:18:41
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 13:16:01
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 13:13:19
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 13:10:38
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 13:06:37
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 13:03:56
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+

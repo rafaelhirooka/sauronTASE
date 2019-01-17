@@ -20,7 +20,6 @@ class Zabbix extends AbstractProgram {
 
     protected function main() {
         try {
-            $this->setName('zabbix');
 
             $db = new DBController('192.168.1.8', 'root', 's3gr3d0', 'zabbix', 'mysql');
 
@@ -59,9 +58,7 @@ class Zabbix extends AbstractProgram {
 
                     $db->update('alerts', $param, $condition);
                 }
-            }
 
-            if (!empty($alerts)) {
                 $this->send($alerts);
             }
 
@@ -167,6 +164,4 @@ class Zabbix extends AbstractProgram {
             throw new \Exception($e->getMessage());
         }
     }
-
-
 }

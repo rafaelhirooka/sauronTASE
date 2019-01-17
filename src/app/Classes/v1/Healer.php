@@ -60,6 +60,7 @@ class Healer extends \Volatile implements Program {
                     $penalty = 0;
 
                     $this->thread = new $this->className($this->loader);
+                    $this->thread->setName($this->className);
                     $this->thread->start();
                     $this->logger->log('info', "Thread {$this->className} reiniciada pelo Healer");
                 }

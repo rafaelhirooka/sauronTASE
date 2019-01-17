@@ -26,11 +26,7 @@ class $argv[1] extends AbstractProgram {
     /**
      * Write the logic of program
      */
-    protected function main() {
-        // Set program name
-        // DO NOT REMOVE THIS
-        \$this->setName('{$argv[1]}');
-        
+    protected function main() {        
         // write your code here
         // please, use try catch man
     }

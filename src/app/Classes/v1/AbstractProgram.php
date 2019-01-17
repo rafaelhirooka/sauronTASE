@@ -25,9 +25,13 @@ abstract class AbstractProgram extends \Thread implements Program {
     protected $time = 60;
 
     public function __construct(ClassLoader $loader) {
-        $this->loader = $loader;
+        try {
+            $this->loader = $loader;
 
-        $this->logger = new Logger(new MongoController(MONGO_HOST, MONGO_PORT));
+            $this->logger = new Logger(new MongoController(MONGO_HOST, MONGO_PORT));
+        } catch (\Exception $e) {
+
+        }
     }
 
     public function setTime(int $time) {
@@ -53,7 +57,7 @@ abstract class AbstractProgram extends \Thread implements Program {
         }
     }
 
-    public function sendContingency($message) {
+    public function sendContingency(array $json) {
         try {
             $this->logger->log('info', 'Sending using AWS');
 
@@ -62,11 +66,15 @@ abstract class AbstractProgram extends \Thread implements Program {
                 'region' => 'us-east-1',
                 'version' => '2010-03-31'
             ]);
-            $client->publish([
-                'Message' => $message,
-                //'TopicArn' => AWS_TOPIC_ARN
-                'PhoneNumber' => '+5519996941420'
-            ]);
+
+            foreach ($json as $item) {
+                $client->publish([
+                    'Message' => $item,
+                    'TopicArn' => AWS_TOPIC_ARN
+                    //'PhoneNumber' => '+5519996941420'
+                ]);
+            }
+
         } catch (\Exception $e) {
             $this->logger->log('error', $e->getMessage() . '. File: ' . $e->getFile() . '. Line: ' . $e->getLine());
         }
@@ -82,7 +90,7 @@ abstract class AbstractProgram extends \Thread implements Program {
     final private function verify() {
         $this->loader->register();
 
-        $this->logger->log('infos', 'Up: ' . $this->name);
+        $this->logger->log('info', 'Up: ' . $this->name);
 
         /*print "Envio teste FuturoFone para {$this->name}\n";
         $this->send(['message' => 'Testando o envio FuturoFone - ' . $this->name, 'phone' => '5519996941420']);

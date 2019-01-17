@@ -78,7 +78,15 @@ class SendSocket extends \Thread {
 
         } catch (\Exception $e) {
             $this->program->logger->log('error', $e->getMessage() . ' File: ' . $e->getFile() . '. Line: ' . $e->getLine());
-            $this->program->sendContingency($this->json[0]->message);
+
+            $json = [];
+            foreach ($this->json as $item) {
+                $json[] = $item->message;
+            }
+
+            $json = array_unique($json);
+            $json = array_values($json);
+            $this->program->sendContingency($json);
         }
     }
 }
