@@ -13,40 +13,65 @@ use Composer\Autoload\ClassLoader;
 
 class SendSocket extends \Thread {
 
+    /**
+     * Program instance to access program method
+     *
+     * @var AbstractProgram
+     */
     private $program;
 
+    /**
+     * JSON with messages and phone numbers
+     *
+     * @var array
+     */
     private $json;
 
+    /**
+     * Composer autoload
+     *
+     * @var ClassLoader
+     */
     private $loader;
 
+    /**
+     * SendSocket constructor.
+     *
+     * @param ClassLoader $loader
+     * @param AbstractProgram $program
+     * @param array $json
+     */
     public function __construct(ClassLoader $loader, AbstractProgram $program, array $json) {
         $this->program = $program;
         $this->json = $json;
         $this->loader = $loader;
     }
 
+    /**
+     * Send socket to SMS server
+     */
     public function run() {
         try {
             $this->loader->register();
 
-            $json = (array)$this->json;
+            $json = (array)$this->json; // convert json to array
 
             foreach ($json as $k => $item) {
                 $json[$k] = (array)$item;
             }
 
-            $socket = socket_create(AF_INET, SOCK_STREAM, 0);
-            $con = @socket_connect($socket, SMS_ADDRESS, SMS_PORT);
+            $socket = socket_create(AF_INET, SOCK_STREAM, 0); // create stream
+            $con = @socket_connect($socket, SMS_ADDRESS, SMS_PORT); // bind with address and port
 
             if ($socket !== false && $con !== false) {
-                socket_set_option($socket,SOL_SOCKET, SO_RCVTIMEO, array("sec" => 30, "usec" => 0));
+                socket_set_option($socket,SOL_SOCKET, SO_RCVTIMEO, array("sec" => 30, "usec" => 0)); // set 30 seconds limit
 
                 $string = json_encode($json);
                 $string .= "\n";
 
                 if ($string !== false) {
-                    @socket_write($socket, $string, strlen($string));
-                    $response = @socket_read($socket, 1024);
+                    @socket_write($socket, $string, strlen($string)); // send socket
+                    $response = @socket_read($socket, 1024); // wait for response
 
                     if ($response == false)
                         throw new \Exception(socket_strerror(socket_last_error()));
@@ -84,6 +109,7 @@ class SendSocket extends \Thread {
                 $json[] = $item->message;
             }
 
+            // prepare to send using contingency (aws)
             $json = array_unique($json);
             $json = array_values($json);
             $this->program->sendContingency($json);

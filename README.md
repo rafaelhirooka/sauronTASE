@@ -21,6 +21,9 @@ $ composer install
 ```
 
 ### Setup
+
+* Create .aws/ directory and a profile called 'profile-sauron'. For more information about aws credentials, [click here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
+
 * Edit where the logs will be registered editing
 ```
     .
@@ -37,7 +40,7 @@ $ composer install
             ├── sms.php
 ```
 
-* Edit aws configurations
+* Edit aws topic arn
 ```
     .
     ├── src

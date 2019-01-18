@@ -9,16 +9,16 @@
 namespace App\Interfaces;
 
 interface DBInterface {
-    /*
+    /**
      * Connect to the database
      */
     public function Connect();
-    /*
+    /**
      * Close connection
      */
     public function CloseConnection();
 
-    /*
+    /**
      * Last inserted id
      */
     public function lastInsertId();

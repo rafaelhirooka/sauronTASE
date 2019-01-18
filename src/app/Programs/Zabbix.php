@@ -14,15 +14,31 @@ use App\Classes\v1\DB\DBController;
 
 class Zabbix extends AbstractProgram {
 
+    /**
+     * Alert to send
+     *
+     * @var array
+     */
     private $alerts;
 
+    /**
+     * Frequency
+     *
+     * @var int
+     */
     protected $time = 5;
 
+    /**
+     * Program logic
+     *
+     * @return mixed|void
+     */
     protected function main() {
         try {
-
+            // Connect to DB
             $db = new DBController('192.168.1.8', 'root', 's3gr3d0', 'zabbix', 'mysql');
 
+            // Get alerts from zabbix db
             $query = "SELECT * FROM alerts 
             INNER JOIN users ON users.userid = alerts.userid
             WHERE status = 1 AND mediatypeid = 6 AND sent = 0 
@@ -33,6 +49,7 @@ class Zabbix extends AbstractProgram {
             $alerts = [];
             if (!empty($r)) {
 
+                // Set alerts
                 $i = 0;
                 foreach ($r as $k => $item) {
                     // Set formatted subjects
@@ -56,10 +73,11 @@ class Zabbix extends AbstractProgram {
                         )
                     );
 
+                    // Update status to "sent"
                     $db->update('alerts', $param, $condition);
                 }
 
-                $this->send($alerts);
+                $this->send($alerts); // send the alerts
             }
 
         } catch (\Exception $e) {
@@ -68,7 +86,13 @@ class Zabbix extends AbstractProgram {
 
     }
 
-    public function set(array $info) {
+    /**
+     * Set alerts
+     *
+     * @param array $info
+     * @throws \Exception
+     */
+    public function setAlerts(array $info) {
         try {
 
             if (!empty($info)) {
@@ -92,10 +116,19 @@ class Zabbix extends AbstractProgram {
         }
     }
 
+    /**
+     * Get alerts
+     *
+     * @return array
+     */
     public function getAlerts() {
         return $this->alerts;
     }
 
+    /**
+     * @return array
+     * @throws \Exception
+     */
     public function getAndUpdate() {
         try {
             // Update sent status
@@ -114,6 +147,13 @@ class Zabbix extends AbstractProgram {
         }
     }
 
+    /**
+     * Build message to send
+     *
+     * @param $subject
+     * @return string
+     * @throws \Exception
+     */
     private function buildSubject($subject) {
         try {
             $res = array();

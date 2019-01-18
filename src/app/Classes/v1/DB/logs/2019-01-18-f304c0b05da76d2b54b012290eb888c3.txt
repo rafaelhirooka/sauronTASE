@@ -1,467 +1,571 @@
-Time : 23:59:19
+Time : 13:59:52
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:56:39
+Time : 13:56:57
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:53:58
+Time : 13:53:51
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:47:23
+Time : 13:50:29
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:44:41
+Time : 13:47:49
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:42:01
+Time : 13:45:08
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:39:21
+Time : 13:42:27
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:36:40
+Time : 13:39:46
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:34:00
+Time : 13:36:16
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:31:20
+Time : 13:30:30
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:28:00
+Time : 13:27:49
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:24:38
+Time : 13:25:09
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:19:22
+Time : 13:22:28
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:16:42
+Time : 13:19:48
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:14:01
+Time : 13:17:07
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:11:22
+Time : 12:42:52
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:07:20
+Time : 07:36:09
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:04:40
+Time : 07:32:48
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 23:01:59
+Time : 07:28:08
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:59:19
+Time : 07:25:27
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:56:38
+Time : 07:22:47
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:53:48
+Time : 07:14:04
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:47:21
+Time : 07:08:08
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:44:42
+Time : 07:05:27
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:42:00
+Time : 07:00:06
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:39:20
+Time : 06:52:05
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:33:58
+Time : 06:48:03
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:31:17
+Time : 06:45:12
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:27:16
+Time : 06:40:06
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:19:19
+Time : 06:37:25
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:16:38
+Time : 06:34:45
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:13:58
+Time : 06:32:04
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:11:17
+Time : 06:28:03
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:07:16
+Time : 06:25:22
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:04:35
+Time : 06:22:42
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 22:01:55
+Time : 06:20:01
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:59:14
+Time : 06:17:11
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:56:25
+Time : 06:12:04
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:51:18
+Time : 06:08:03
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:47:17
+Time : 06:05:22
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:44:36
+Time : 06:02:41
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:41:56
+Time : 06:00:01
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:39:15
+Time : 05:57:21
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:36:35
+Time : 05:54:40
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:33:53
+Time : 05:51:49
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:31:13
+Time : 05:46:43
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:28:32
+Time : 05:44:03
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:25:40
+Time : 05:36:00
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:23:15
+Time : 05:27:58
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:20:35
+Time : 05:25:17
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:17:54
+Time : 05:22:27
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:15:14
+Time : 05:17:20
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:11:52
+Time : 05:14:39
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:09:13
+Time : 05:11:59
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:06:32
+Time : 05:07:57
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:03:51
+Time : 05:05:17
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 21:01:10
+Time : 05:02:36
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:57:49
+Time : 04:59:56
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:53:53
+Time : 04:57:15
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:51:14
+Time : 04:54:25
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:47:13
+Time : 04:49:18
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:44:33
+Time : 04:46:38
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:41:52
+Time : 04:43:58
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:39:12
+Time : 04:41:18
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:36:31
+Time : 04:35:57
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:33:51
+Time : 04:32:37
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:31:11
+Time : 04:29:55
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:24:34
+Time : 04:27:05
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:21:54
+Time : 04:21:59
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:19:12
+Time : 04:19:18
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:16:32
+Time : 04:16:39
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:13:51
+Time : 03:44:52
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:11:11
+Time : 03:42:12
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:07:09
+Time : 03:39:31
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:04:29
+Time : 03:36:41
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 20:01:48
+Time : 03:31:35
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:58:58
+Time : 03:27:33
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:53:52
+Time : 03:24:53
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:51:11
+Time : 03:22:11
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:48:31
+Time : 03:19:31
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:45:50
+Time : 03:16:49
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:43:10
+Time : 03:14:09
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:40:29
+Time : 03:11:28
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:37:50
+Time : 03:04:51
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:31:52
+Time : 03:02:11
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:29:12
+Time : 02:59:30
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:26:31
+Time : 02:56:50
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:23:11
+Time : 02:54:09
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:19:10
+Time : 02:51:30
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:16:30
+Time : 02:47:29
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:13:49
+Time : 02:44:49
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:11:09
+Time : 02:42:08
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:07:08
+Time : 02:39:18
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 19:01:52
+Time : 02:36:52
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:59:12
+Time : 02:34:12
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:55:11
+Time : 02:31:31
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:51:09
+Time : 02:27:30
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:47:49
+Time : 02:24:48
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:45:08
+Time : 02:22:08
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:39:06
+Time : 02:19:27
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:36:16
+Time : 02:14:11
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:31:10
+Time : 02:11:31
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:27:08
+Time : 02:07:30
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:24:28
+Time : 02:04:49
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:21:47
+Time : 02:02:08
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:19:07
+Time : 01:59:28
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:16:27
+Time : 01:56:47
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:13:46
+Time : 01:54:06
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:11:06
+Time : 01:49:55
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:06:55
+Time : 01:47:15
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 18:04:30
+Time : 01:42:08
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 13:18:41
+Time : 01:39:27
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 13:16:01
+Time : 01:36:47
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 13:13:19
+Time : 01:34:06
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 13:10:38
+Time : 01:31:26
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 13:06:37
+Time : 01:27:24
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 
 
-Time : 13:03:56
+Time : 01:24:44
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 01:22:03
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 01:16:47
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 01:14:07
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 01:11:26
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 01:07:26
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 01:04:44
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 01:02:05
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:59:24
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:56:44
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:54:02
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:49:52
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:44:46
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:42:04
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:39:24
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:36:43
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:34:03
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:31:22
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:27:21
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:24:40
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:21:49
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:16:44
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:14:03
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:11:22
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:07:20
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:04:40
+SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
+
+
+Time : 00:02:00
 SQLSTATE[HY000] [2002] Uma operação de soquete foi tentada em um host inacessível.
 

@@ -13,15 +13,25 @@ use App\Classes\v1\AbstractProgram;
 
 class SocketServer extends AbstractProgram {
 
+    /**
+     * Socket resource
+     *
+     * @var socket resource
+     */
     private $socket;
 
+    /**
+     * Wait socket request
+     *
+     * @return mixed|void
+     */
     protected function main() {
         try {
             $this->setName('socketServer');
 
-            $this->socket = socket_create(AF_INET, SOCK_STREAM, 0);
+            $this->socket = socket_create(AF_INET, SOCK_STREAM, 0); // create stream
 
-            socket_bind($this->socket, '0.0.0.0', SOCKET_PORT);
+            socket_bind($this->socket, '0.0.0.0', SOCKET_PORT); // allow any connections
             socket_listen($this->socket, 3);
             socket_set_nonblock($this->socket);
             socket_set_option($this->socket, SOL_SOCKET, SO_REUSEADDR, 1);
@@ -33,7 +43,7 @@ class SocketServer extends AbstractProgram {
                 try {
                     $read = $clients;
 
-                    if (socket_select($read, $write, $except, NULL) < 1)
+                    if (socket_select($read, $write, $except, NULL) < 1) // wait connection
                         continue;
 
 
@@ -54,8 +64,8 @@ class SocketServer extends AbstractProgram {
 
 
                     foreach ($message as $k => $read_sock) {
-                        socket_getpeername($read_sock, $ip, $port);
-                        socket_write($read_sock, '200', 3);
+                        socket_getpeername($read_sock, $ip, $port); // get client ip and port
+                        socket_write($read_sock, '200', 3); // response to client
 
                         unset($message[$k]);
                         $key = array_search($read_sock, $clients);
