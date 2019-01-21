@@ -65,6 +65,8 @@ class SendSocket extends \Thread {
 
             if ($socket !== false && $con !== false) {
                 socket_set_option($socket,SOL_SOCKET, SO_RCVTIMEO, array("sec" => 30, "usec" => 0)); // set 30 seconds limit
+                $linger = array ('l_linger' => 0, 'l_onoff' => 1);
+                socket_set_option($socket, SOL_SOCKET, SO_LINGER, $linger);
 
                 $string = json_encode($json);
                 $string .= "\n";
