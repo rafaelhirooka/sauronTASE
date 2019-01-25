@@ -173,11 +173,11 @@ abstract class AbstractProgram extends \Thread implements Program {
         while (true) {
             try {
                 $this->main();
-
-                sleep($this->time);
             } catch (\Exception $e) {
                 $this->logger->log('error', $e->getMessage());
             }
+
+            sleep($this->time);
         }
     }
 

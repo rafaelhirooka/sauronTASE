@@ -6,6 +6,10 @@
         <testsuite name="classes">
             <directory suffix=".php">tests/Classes/v1/</directory>
         </testsuite>
+
+        <testsuite name="programs">
+            <directory suffix=".php">tests/Programs/v1/</directory>
+        </testsuite>
     </testsuites>
 
 </phpunit>
