@@ -3,6 +3,7 @@ namespace App\Programs;
 
 use App\Classes\v1\AbstractProgram;
 use App\Classes\v1\DB\DBController;
+use PHPMailer\PHPMailer\PHPMailer;
 use Phpml\ModelManager;
 
 class PayOne extends AbstractProgram {
@@ -43,6 +44,8 @@ class PayOne extends AbstractProgram {
             }
 
             $transactions = $db->custom($query);
+
+            $db->CloseConnection();
 
             if (!empty($transactions)) {
                 $this->last_id = $transactions[count($transactions) - 1]['ID'];
@@ -97,6 +100,33 @@ class PayOne extends AbstractProgram {
 
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
+        }
+    }
+
+    protected function send(array $json) {
+        try {
+            $mail = new PHPMailer();
+            //$mail->SMTPDebug = 2;
+            $mail->isSMTP();
+
+            $mail->Host = 'smtp.office365.com';
+            $mail->Port       = 587;
+            $mail->SMTPSecure = 'tls';
+            $mail->SMTPAuth   = true;
+            $mail->Username = 'webmaster@vegascard.com.br';
+            $mail->Password = 'grupovegas2@18';
+            $mail->setFrom('webmaster@vegascard.com.br', 'TI');
+            $mail->addAddress('ti@vegascard.com.br');
+            $mail->isHTML(true);
+            $mail->CharSet = 'UTF-8';
+
+            $mail->Subject = 'Payone Monitoramento';
+            $mail->Body    = $json[0]['message'];
+            $mail->AltBody = $json[0]['message'];
+
+            $mail->send();
+        } catch (\Exception $e) {
+            echo $e->getMessage();
         }
     }
 }
