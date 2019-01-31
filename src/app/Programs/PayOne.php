@@ -45,8 +45,6 @@ class PayOne extends AbstractProgram {
 
             $transactions = $db->custom($query);
 
-            $db->CloseConnection();
-
             if (!empty($transactions)) {
                 $this->last_id = $transactions[count($transactions) - 1]['ID'];
 
@@ -96,6 +94,8 @@ class PayOne extends AbstractProgram {
                     }
                 }
             }
+
+            $db->CloseConnection();
 
 
         } catch (\Exception $e) {

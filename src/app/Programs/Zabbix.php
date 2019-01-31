@@ -80,9 +80,13 @@ class Zabbix extends AbstractProgram {
                 $this->send($alerts); // send the alerts
             }
 
+            $db->CloseConnection();
+
         } catch (\Exception $e) {
             $this->logger->log('error', $e->getMessage() . '. File: ' . $e->getFile() . '. Line: ' . $e->getLine());
         }
+
+
 
     }
 
