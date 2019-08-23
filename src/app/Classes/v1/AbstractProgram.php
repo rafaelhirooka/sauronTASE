@@ -8,8 +8,6 @@
 
 namespace App\Classes\v1;
 
-
-use App\Classes\v1\DB\MongoController;
 use App\Interfaces\Program;
 use Aws\Sns\SnsClient;
 use Composer\Autoload\ClassLoader;
@@ -53,7 +51,7 @@ abstract class AbstractProgram extends \Thread implements Program {
         try {
             $this->loader = $loader;
 
-            $this->logger = new Logger(new MongoController(MONGO_HOST, MONGO_PORT));
+            $this->logger = new Logger();
         } catch (\Exception $e) {
 
         }
@@ -158,12 +156,6 @@ abstract class AbstractProgram extends \Thread implements Program {
         $this->loader->register();
 
         $this->logger->log('info', 'Up: ' . $this->name);
-
-        /*print "Envio teste FuturoFone para {$this->name}\n";
-        $this->send(['message' => 'Testando o envio FuturoFone - ' . $this->name, 'phone' => '5519996941420']);
-
-        print "Envio teste AWS para {$this->name}\n";
-        $this->sendContingency('Testando o envio FuturoFone - ' . $this->name);*/
     }
 
     /**

@@ -18,12 +18,9 @@ switch ($argv[0]) {
 			} else {
 				$mOutput = '-> Where is the interpreter path';
 			}
-			
-			
 		} else {
             exec('php ' . __DIR__ . '/src/app.php', $output);
         }
-
 
         if (!empty($output)) {
             $exit = NULL;
@@ -75,7 +72,7 @@ switch ($argv[0]) {
             break;
 
     default:
-        $mOutput = "-> Commando not found\n";
+        $mOutput = "-> Command not found\n";
         break;
 
 }

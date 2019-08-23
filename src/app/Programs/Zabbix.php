@@ -85,9 +85,6 @@ class Zabbix extends AbstractProgram {
         } catch (\Exception $e) {
             $this->logger->log('error', $e->getMessage() . '. File: ' . $e->getFile() . '. Line: ' . $e->getLine());
         }
-
-
-
     }
 
     /**
@@ -98,9 +95,7 @@ class Zabbix extends AbstractProgram {
      */
     public function setAlerts(array $info) {
         try {
-
             if (!empty($info)) {
-
                 $i = 0;
                 foreach ($info as $k => $item) {
                     // Set formatted subjects
@@ -113,8 +108,6 @@ class Zabbix extends AbstractProgram {
             } else {
                 $this->alerts = array();
             }
-
-
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
@@ -145,7 +138,6 @@ class Zabbix extends AbstractProgram {
             }
 
             return $this->alerts;
-
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
@@ -187,9 +179,6 @@ class Zabbix extends AbstractProgram {
                 } else {
                     $res["subject"] = "Olá. Temos um problema: ". ucfirst($subject);
                 }
-
-
-
             } else {
                 // It's a solution
                 $res["type"] = 'ok';
@@ -203,7 +192,6 @@ class Zabbix extends AbstractProgram {
             }
 
             return $res["subject"];
-
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }

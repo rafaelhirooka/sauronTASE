@@ -9,16 +9,7 @@
 namespace App\Classes\v1;
 
 
-use App\Classes\v1\DB\MongoController;
-
 class Logger {
-    /**
-     * Mongo instance
-     *
-     * @var MongoController
-     */
-    private $db;
-
     /**
      * Date format that insert in Mongo
      * @var string
@@ -28,15 +19,10 @@ class Logger {
     /**
      * Logger constructor.
      *
-     * @param MongoController $db
      * @param string $dateFormat
      * @throws \Exception
      */
-    public function __construct(MongoController $db, string $dateFormat = 'Y-m-d H:i:s') {
-        $this->db = $db;
-
-        $this->db->setDB('sauron-tase');
-
+    public function __construct(string $dateFormat = 'Y-m-d H:i:s') {
         $this->dateFormat = $dateFormat;
     }
 
@@ -61,20 +47,11 @@ class Logger {
      */
     private function formatMessage(string $level, string $message, array $context = array()) {
         if (!empty($context)) {
-            $message = [
-                'datetime' => $this->getTimestamp(),
-                'level' => strtoupper($level),
-                'message' => $message,
-                'context' => json_encode($context)
-            ];
+            $context = json_encode($context);
+            $message = "[{$this->getTimestamp()}] {$level}: $message\nContext:\n{$context}\n";
         } else {
-            $message = [
-                'datetime' => $this->getTimestamp(),
-                'level' => strtoupper($level),
-                'message' => $message
-            ];
+            $message = "[{$this->getTimestamp()}] {$level}: $message\n";
         }
-
 
         return $message;
     }
@@ -87,7 +64,7 @@ class Logger {
      * @param array $context
      */
     public function log(string $level, string $message, array $context = array()) {
-        try {
+        /*try {
             $m = $this->formatMessage($level, $message, $context);
 
             switch ($level) {
@@ -113,10 +90,6 @@ class Logger {
             $this->db->insertBatch([$m]);
         } catch (\Exception $e) {
 
-        }
-    }
-
-    public function __destruct() {
-        $this->db = NULL;
+        }*/
     }
 }

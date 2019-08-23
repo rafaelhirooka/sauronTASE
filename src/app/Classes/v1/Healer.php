@@ -8,8 +8,6 @@
 
 namespace App\Classes\v1;
 
-
-use App\Classes\v1\DB\MongoController;
 use App\Interfaces\Program;
 use Composer\Autoload\ClassLoader;
 
@@ -69,7 +67,7 @@ class Healer extends \Volatile implements Program {
             $this->thread = $thread;
             $this->className = $className;
             $this->loader = $loader;
-            $this->logger = new Logger(new MongoController(MONGO_HOST, MONGO_PORT));
+            $this->logger = new Logger();
         } catch (\Exception $e) {
 
         }
@@ -119,7 +117,6 @@ class Healer extends \Volatile implements Program {
                 }
 
                 sleep($this->time); // wait
-
             } catch (\Exception $e) {
                 $this->logger->log('info', "Thread {$this->className} parou. Erro: " . $e->getMessage());
             }

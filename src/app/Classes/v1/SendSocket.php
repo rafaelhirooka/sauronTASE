@@ -104,7 +104,8 @@ class SendSocket extends \Thread {
 
 
         } catch (\Exception $e) {
-            $this->program->logger->log('error', $e->getMessage() . ' File: ' . $e->getFile() . '. Line: ' . $e->getLine());
+            //$this->program->logger->log('error', $e->getMessage() . ' File: ' . $e->getFile() . '. Line: ' . $e->getLine());
+            // Log error
 
             $json = [];
             foreach ($this->json as $item) {
